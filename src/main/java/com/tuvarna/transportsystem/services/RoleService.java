@@ -1,0 +1,56 @@
+package com.tuvarna.transportsystem.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.tuvarna.transportsystem.dao.RoleDAO;
+import com.tuvarna.transportsystem.entities.Role;
+import com.tuvarna.transportsystem.interfaces.ICrudOperations;
+
+public class RoleService implements ICrudOperations<Role> {
+	private RoleDAO roleDAO;
+
+	public RoleService() {
+		this.roleDAO = new RoleDAO();
+	}
+
+	@Override
+	public Optional<Role> getById(int id) {
+		return roleDAO.getById(id);
+	}
+
+	@Override
+	public Optional<Role> getByName(String name) {
+		return roleDAO.getByName(name);
+	}
+
+	@Override
+	public List<Role> getAll() {
+		return roleDAO.getAll();
+	}
+
+	@Override
+	public void save(Role role) {
+		roleDAO.save(role);
+	}
+
+	@Override
+	public void updateName(Role role, String newValue) {
+		roleDAO.updateName(role, newValue);
+	}
+
+	@Override
+	public void deleteById(int id) {
+		roleDAO.deleteById(id);
+	}
+
+	@Override
+	public void deleteByName(String name) {
+		roleDAO.deleteByName(name);
+	}
+
+	@Deprecated
+	@Override
+	public void update(Role entity, String[] newValues) {
+	}
+}
