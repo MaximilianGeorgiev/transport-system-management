@@ -1,3 +1,6 @@
+Project has been refactored for personal use. Original work, commits and stable version to be found on: https://github.com/tuvarna-coursework/transport-system-management
+===========================================================================================================
+
 VI. Пътнически превози
 
 Да се разработи информационна система, предоставяща услуга пътнически превози. Програмата съхранява и обработва данни за разпространение на билети.
